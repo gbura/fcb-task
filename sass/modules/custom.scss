@@ -1,0 +1,129 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #e0f2fe;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  &__preview {
+    background: linear-gradient(135deg, #0f172a, #1e40af);
+    width: 500px;
+    height: 250px;
+    border-radius: 12px;
+    position: relative;
+    color: white;
+    padding: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+    background: url('../../images/background.jpg') no-repeat center/cover;
+
+    &--chip {
+      position: absolute;
+      top: 15px;
+      left: 20px;
+      width: 50px;
+      height: 40px;
+      background: url('../../images/chip.png') no-repeat center/cover;
+    }
+
+    &--visa {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      width: 80px;
+      height: 40px;
+      background: url('../../images/visa.png') no-repeat center/contain;
+    }
+
+    &--number {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 20px;
+      letter-spacing: 2px;
+    }
+
+    &--holder {
+      position: absolute;
+      bottom: 40px;
+      left: 20px;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+    &--expires {
+      position: absolute;
+      bottom: 40px;
+      right: 20px;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+  }
+
+  &__form {
+    background: white;
+    width: 650px;
+    padding: 120px 30px 30px 30px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: -50px;
+
+    &--input,
+    &--input-cvv,
+    select {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #94a3b8;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+    &--input:focus,
+    &--input-cvv:focus,
+    select:focus {
+      outline: none;
+      border-color: #1e40af;
+    }
+
+    .date__container {
+      display: flex;
+      gap: 5px;
+      width: 100%;
+    }
+    &--submit-btn {
+      background-color: #1e40af;
+      width: 100%;
+      padding: 20px;
+      color: white;
+      font-weight: bold;
+      border-radius: 12px;
+    }
+  }
+}
+
+.card .card__form .card__form button {
+  width: 100%;
+  background: #1e40af;
+  color: white;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #1e3a8a;
+}
