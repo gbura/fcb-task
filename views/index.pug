@@ -3,17 +3,21 @@ include defaults/mixins.pug
 block content
     .container
         .card__preview
-            .card__preview--chip
-            .card__preview--visa
-            .card__preview--number XXXX XXXX XXXX XXXX
-            .card__preview--holder Jan Kowalski
-            .card__preview--expires MM/YY
+            .front
+                .card__preview--chip
+                .card__preview--card-type
+                .card__preview--number XXXX XXXX XXXX XXXX
+                .card__preview--holder JAN KOWALSKI
+                .card__preview--expires MM/YY
+            .back
+                .back__line.back__line--black
+                .back__line.back__line--white
+                    span.back__line--cvv CVV:
+                .card__preview--card-type
         form.card__form
-            
             input#card__form--number.card__form--input(type="text" placeholder="Card number")
             input#card__form--name.card__form--input(type="text" placeholder="Card name")
             .date__container
-                label(for="card__form--select")
                 select#card__form--select
                     option 01
                     option 02
