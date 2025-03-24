@@ -15,7 +15,7 @@ block content
                     span.back__line--cvv CVV:
                 .card__preview--card-type
         form.card__form
-            input#card__form--number.card__form--input(type="text" placeholder="Card number")
+            input#card__form--number.card__form--input(type="text" placeholder="Card number" maxlength="16")
             input#card__form--name.card__form--input(type="text" placeholder="Card name")
             .date__container
                 select#card__form--select
@@ -38,5 +38,5 @@ block content
                     option 2028
                     option 2029
                     option 2030
-                input#card__form--input.card__form--input-cvv(type="text" placeholder="CVV")
+                input#card__form--input.card__form--input-cvv(type="text" placeholder="CVV" maxlength="4")
             button.card__form--submit-btn Submit
