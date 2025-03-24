@@ -12,6 +12,8 @@ export default function () {
 
   const cardType = document.querySelector('.card__preview--card-type')
 
+  const submitBtn = document.querySelector('.card__form--submit-btn')
+
   function formatCardNumber(value) {
     return value
       .replace(/\D/g, '')
@@ -54,5 +56,19 @@ export default function () {
 
   cvvInput.addEventListener('blur', function () {
     document.querySelector('.card__preview').classList.remove('flip')
+  })
+
+  submitBtn.addEventListener('click', function (e) {
+    e.preventDefault()
+
+    const formData = {
+      cardNumber: cardNumberInput.value,
+      cardName: cardNameInput.value,
+      monthExpires: monthSelect.value,
+      yearExpires: yearSelect.value,
+      cvvNumber: cvvInput.value,
+    }
+
+    console.log(formData)
   })
 }
